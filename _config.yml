@@ -36,11 +36,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: /:slug
   - scope:
       path: ""
+      type: "pages"
     values:
-      layout: "default"
+      layout: "page"
+      # permalink: /:basename
 
 page_excerpts: "true"
 
