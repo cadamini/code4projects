@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="{{ site.url }}{{ '/assets/css/styles.scss' }}">
+    <link rel="stylesheet" href="{{ site.url }}{{ '/assets/fontawesome/css/fontawesome.css' }}">
+    <link rel="stylesheet" href="{{ site.url }}{{ '/assets/fontawesome/css/brands.css' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% if page.robots  %}
     <meta name='robots' content='{{ page.robots }}' />
@@ -28,6 +28,9 @@
   <body>
     <div id="page">
       {% include header.html %}
+
+      {{ site.baseurl }}/{{ 'assets/css/styles.css' }}
+      
       {% include navigation.html %}
       {{ content }}
       {% include footer.html %}
